@@ -3,7 +3,7 @@
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :category, collection: %w[chinese italian japanese french belgian] %>
+  <%= f.input :category, collection: Restaurant::CATEGORY_LIST %>
   <%= f.submit "Create restaurant", class: "btn btn-primary" %>
 <% end %>
 <p> <%= link_to "Go back to the list", restaurants_path, class: "btn btn-primary"%> </p>
